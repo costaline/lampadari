@@ -1,16 +1,28 @@
 const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const mode = process.env.NODE_ENV;
 const isDevelopment = mode === "development";
 
+const regex = {
+  script: /\.(js)$/i,
+  style: /\.(css|scss)$/i,
+  html: /\.html$/i,
+  font: /\.(eot|otf|ttf|woff|woff2)$/i,
+  image: /\.(png|jpg|jpeg|svg)$/i,
+  icon: /(icon-)(.*)(\.(png|jpg|jpeg|svg)$)/i,
+};
+
 module.exports = () => {
   return {
     mode,
     entry: {
-      main: ["./src/scripts/index.js", "./src/styles/index.scss"],
+      main: [
+        "./src/scripts/index.js",
+        "./src/styles/index.scss",
+        "./src/index.html",
+      ],
     },
     output: {
       path: path.resolve(__dirname, "build/"),
@@ -20,7 +32,7 @@ module.exports = () => {
     module: {
       rules: [
         {
-          test: /\.(js)$/,
+          test: regex.script,
           exclude: /node_modules/,
           use: {
             loader: "babel-loader",
@@ -28,7 +40,7 @@ module.exports = () => {
           },
         },
         {
-          test: /\.(css|scss)$/,
+          test: regex.style,
           use: [
             {
               loader: MiniCssExtractPlugin.loader,
@@ -61,12 +73,41 @@ module.exports = () => {
           ],
         },
         {
-          test: /\.(img|jpg|jpeg|svg)$/,
+          test: regex.html,
+          use: [
+            "file-loader?name=[name].[ext]",
+            "extract-loader",
+            {
+              loader: "html-loader",
+              options: {
+                minimize: !isDevelopment,
+                attributes: {
+                  list: [
+                    {
+                      tag: "img",
+                      attribute: "src",
+                      type: "src",
+                    },
+                  ],
+                },
+              },
+            },
+          ],
+        },
+        {
+          test: regex.image,
+          exclude: regex.icon,
           use: [
             {
-              loader: "file-loader",
+              loader: "url-loader",
               options: {
-                name: "[path][name].[ext]",
+                limit: 4096,
+                fallback: {
+                  loader: "file-loader",
+                  options: {
+                    name: "images/[name].[ext]",
+                  },
+                },
               },
             },
             {
@@ -84,12 +125,16 @@ module.exports = () => {
           ],
         },
         {
-          test: /\.(ttf|woff2?)$/,
+          test: regex.icon,
+          use: "url-loader",
+        },
+        {
+          test: regex.font,
           use: [
             {
               loader: "file-loader",
               options: {
-                name: "[path][name].[ext]",
+                name: "fonts/[name].[ext]",
               },
             },
           ],
@@ -98,12 +143,8 @@ module.exports = () => {
     },
     plugins: [
       new CleanWebpackPlugin(),
-      new HtmlWebpackPlugin({
-        inject: true,
-        template: "src/index.html",
-      }),
       new MiniCssExtractPlugin({
-        filename: "main.css",
+        filename: "[name].css",
         ignoreOrder: false,
       }),
     ],
@@ -128,7 +169,6 @@ module.exports = () => {
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "src/"),
-        "@assets": path.resolve(__dirname, "assets/"),
       },
     },
   };

@@ -1,0 +1,102 @@
+.header-main {
+  background-color: $colorBgCommon;
+}
+
+.header-main__content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 130px;
+}
+
+.header-main__nav {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.header-main__logo {
+  margin-top: 3px;
+  margin-left: 10px;
+}
+
+.header-main__nav-list {
+  display: flex;
+  margin-top: auto;
+}
+
+.header-main__nav-item {
+  position: relative;
+  color: $colorLight;
+  font-size: pxToRem(18);
+  text-transform: uppercase;
+
+  &--active {
+    color: $colorAccent;
+    font-weight: 700;
+  }
+}
+
+.header-main__nav-link {
+  padding: 0 12px;
+
+  &:hover {
+    color: $colorAccent;
+  }
+}
+
+.header-main__sub-menu {
+  position: absolute;
+  left: -5px;
+  z-index: 1;
+  display: none;
+  min-width: 150px;
+  padding: 8px;
+  padding-top: 29px;
+  background-color: $colorBgCommon;
+}
+
+.header-main__nav-item:hover .header-main__sub-menu {
+  display: block;
+}
+
+.headre-main__sub-item {
+  padding: 6px 5px 4px 7px;
+  font-size: pxToRem(16);
+  border-bottom: 1px solid $colorBorderCommon;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    color: $colorAccent;
+  }
+}
+
+.header-main__show-modal {
+  position: absolute;
+  top: 6px;
+  right: 9px;
+  display: flex;
+  align-items: center;
+  color: $colorLight;
+  font-size: pxToRem(14);
+  line-height: 0;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    color: $colorAccent;
+  }
+}
+
+.header-main__icon-lock {
+  width: 9px;
+  height: 13px;
+  margin-left: 10px;
+  background-image: $iconLock;
+  background-repeat: no-repeat;
+  background-position: center;
+}

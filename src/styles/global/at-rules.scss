@@ -1,0 +1,5 @@
+@function pxToRem($size: $sizeCommon) {
+  $result: $size / $sizeCommon;
+
+  @return #{$result}rem;
+}

@@ -4,7 +4,8 @@
 
 html {
   color: $colorCommon;
-  font-size: $sizeCommon;
+  font-weight: 400;
+  font-size: #{$sizeCommon}px;
   font-family: $fontCommon;
 }
 
@@ -25,6 +26,11 @@ ul {
   list-style: none;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -38,4 +44,10 @@ input[type="radio"].visually-hidden {
   border: 0;
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 30px;
 }

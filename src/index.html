@@ -11,45 +11,105 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" type="text/css" href="./main.css" />
 
     <title>Lampadari</title>
   </head>
 
   <body>
-    <header>
-      <nav>
-        <div>
-          <a href="/"><img src="" alt="logo" /></a>
-        </div>
+    <header class="header-main">
+      <div class="container">
+        <div class="header-main__content">
+          <nav class="header-main__nav">
+            <div class="header-main__logo">
+              <a href="/">
+                <img src="./images/logo.png" width="283" height="83" alt="logo"
+              /></a>
+            </div>
 
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li>
-            <p><a href="#">Azienda</a></p>
-            <ul>
-              <li><a href="#">Storia</a></li>
-              <li><a href="#">MM Design</a></li>
-              <li><a href="#">Designer</a></li>
-              <li><a href="#">Certificazioni</a></li>
+            <ul class="header-main__nav-list">
+              <li class="header-main__nav-item header-main__nav-item--active">
+                <a href="#" class="header-main__nav-link">Home</a>
+              </li>
+              <li class="header-main__nav-item">
+                <a class="header-main__nav-link" href="#">Azienda</a>
+                <ul class="header-main__sub-menu">
+                  <li class="headre-main__sub-item"><a href="#">Storia</a></li>
+                  <li class="headre-main__sub-item">
+                    <a href="#">MM Design</a>
+                  </li>
+                  <li class="headre-main__sub-item">
+                    <a href="#">Designer</a>
+                  </li>
+                  <li class="headre-main__sub-item">
+                    <a href="#">Certificazioni</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header-main__nav-item">
+                <a href="#" class="header-main__nav-link">Collezioni</a>
+                <ul class="header-main__sub-menu">
+                  <li class="headre-main__sub-item"><a href="#">Storia</a></li>
+                  <li class="headre-main__sub-item">
+                    <a href="#">MM Design</a>
+                  </li>
+                  <li class="headre-main__sub-item">
+                    <a href="#">Designer</a>
+                  </li>
+                  <li class="headre-main__sub-item">
+                    <a href="#">Certificazioni</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header-main__nav-item">
+                <a href="#" class="header-main__nav-link">News</a>
+                <ul class="header-main__sub-menu">
+                  <li class="headre-main__sub-item"><a href="#">Storia</a></li>
+                  <li class="headre-main__sub-item">
+                    <a href="#">MM Design</a>
+                  </li>
+                  <li class="headre-main__sub-item">
+                    <a href="#">Designer</a>
+                  </li>
+                  <li class="headre-main__sub-item">
+                    <a href="#">Certificazioni</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header-main__nav-item">
+                <a href="#" class="header-main__nav-link">Contatti</a>
+                <ul class="header-main__sub-menu">
+                  <li class="headre-main__sub-item"><a href="#">Storia</a></li>
+                  <li class="headre-main__sub-item">
+                    <a href="#">MM Design</a>
+                  </li>
+                  <li class="headre-main__sub-item">
+                    <a href="#">Designer</a>
+                  </li>
+                  <li class="headre-main__sub-item">
+                    <a href="#">Certificazioni</a>
+                  </li>
+                </ul>
+              </li>
             </ul>
-          </li>
-          <li><a href="#">Collezioni</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Contatti</a></li>
-        </ul>
-      </nav>
+          </nav>
 
-      <p id="show-modal">Area riservata <span>icon</span></p>
+          <p id="show-modal" class="header-main__show-modal">
+            <span>Area riservata</span>
+            <span class="header-main__icon-lock"></span>
+          </p>
+        </div>
+      </div>
     </header>
 
-    <main>
+    <main class="main">
       <h1 class="visually-hidden">Lampadari</h1>
       <section>
         <div>
           <ul>
-            <li><img src="" alt="slide 1" /></li>
-            <li><img src="" alt="slide 2" /></li>
-            <li><img src="" alt="slide 3" /></li>
+            <li><img alt="slide 1" /></li>
+            <li><img alt="slide 2" /></li>
+            <li><img alt="slide 3" /></li>
           </ul>
           <div>dots</div>
         </div>
@@ -96,7 +156,7 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="container footer-main">
       <section>
         <div>
           <h4>Lampadari made in italy</h4>
@@ -179,5 +239,6 @@
     </footer>
 
     <div id="modal">modal</div>
+    <script src="./main.js"></script>
   </body>
 </html>
