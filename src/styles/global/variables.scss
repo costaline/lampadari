@@ -5,8 +5,11 @@ $colorDark: #020202;
 $colorAccent: #e2d1a6;
 
 $colorBgCommon: #353436;
+$colorBgLight: #ffffff;
+$colorBgAccent: #e2d1a6;
 
 $colorBorderCommon: #ffffff;
+$colorBorderDark: #000000;
 
 //fonts family
 $fontCommon: "Open Sans", sans-serif !default;
@@ -14,7 +17,7 @@ $fontTitle: "Playfair Display", serif !default;
 
 //fonts size
 
-/* vaule in px
+/* value in px
  * use only w/ interpolation or function pxToRem */
 $sizeCommon: 16;
 

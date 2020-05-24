@@ -105,7 +105,7 @@ module.exports = () => {
                 fallback: {
                   loader: "file-loader",
                   options: {
-                    name: "images/[name].[ext]",
+                    name: "images/[name]-[contenthash:4].[ext]",
                   },
                 },
               },

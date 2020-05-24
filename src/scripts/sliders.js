@@ -1,24 +1,28 @@
-const sliders = (slidesWrapper, slides, prev, next, dotsWrapper) => {
+const createSliderDots = (count, container) => {
+  for (let i = 0; i < count; i++) {
+    const dot = document.createElement("span");
+
+    dot.classList.add("slider-dot");
+
+    container.appendChild(dot);
+  }
+
+  return document.querySelectorAll(".slider-dot");
+};
+
+const sliders = (slidesWrapper, slideItem, prev, next, dotsWrapper) => {
   let slideIndex = 0;
   let paused = false;
 
   const wrapper = document.querySelector(slidesWrapper);
-  const items = document.querySelectorAll(slides);
+  const items = document.querySelectorAll(slideItem);
   const dotsContainer = document.querySelector(dotsWrapper);
+  const slide = document.querySelector(slideItem);
 
-  const createSliderDots = () => {
-    for (let i = 0; i < items.length; i++) {
-      const dot = document.createElement("span");
-      dot.classList.add("slider-dot");
-      dot.textContent = i;
+  const dots = createSliderDots(items.length, dotsContainer);
 
-      dotsContainer.appendChild(dot);
-    }
-  };
-
-  createSliderDots();
-
-  const dots = document.querySelectorAll(".slider-dot");
+  slide.parentNode.style.position = "relative";
+  slide.parentNode.style.height = slide.clientHeight + "px";
 
   const showSlides = (n) => {
     if (n > items.length - 1) {
@@ -29,11 +33,12 @@ const sliders = (slidesWrapper, slides, prev, next, dotsWrapper) => {
       slideIndex = items.length;
     }
 
-    items.forEach((item) => (item.style.display = "none"));
-    dots.forEach((dot) => dot.classList.remove("slide-dot--active"));
+    items.forEach((item) => item.classList.add("slider__slide"));
+    items.forEach((item) => item.classList.remove("slider__slide--showed"));
+    dots.forEach((dot) => dot.classList.remove("slider-dot--active"));
 
-    items[slideIndex].style.display = "block";
-    dots[slideIndex].classList.add("slide-dot--active");
+    items[slideIndex].classList.add("slider__slide--showed");
+    dots[slideIndex].classList.add("slider-dot--active");
   };
 
   showSlides(slideIndex);
@@ -42,7 +47,7 @@ const sliders = (slidesWrapper, slides, prev, next, dotsWrapper) => {
     dot.addEventListener("click", () => showSlides((slideIndex = idx)))
   );
 
-  const changeSlide = (n) => showSlides((slideIndex += n));
+  const changeSlide = (n = 1) => showSlides((slideIndex += n));
 
   try {
     const prevBtn = document.querySelector(prev);
@@ -55,7 +60,7 @@ const sliders = (slidesWrapper, slides, prev, next, dotsWrapper) => {
   }
 
   function activateAuto() {
-    paused = setInterval(() => changeSlide(1), 3000);
+    paused = setInterval(() => changeSlide(), 5000);
   }
 
   activateAuto();
