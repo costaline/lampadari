@@ -1,0 +1,20 @@
+.info-box {
+  max-width: 531px;
+  min-height: 138px;
+  padding: 19px 27px;
+  background-color: $colorBgLight;
+  opacity: 0.65;
+}
+
+.info-box__title {
+  margin-bottom: 27px;
+  font-size: pxToRem(30);
+  font-style: italic;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.info-box__text {
+  font-size: pxToRem(18);
+  line-height: 24px;
+}
