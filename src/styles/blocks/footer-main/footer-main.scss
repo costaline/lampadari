@@ -1,0 +1,160 @@
+.footer-main {
+  padding-bottom: 10px;
+  color: $colorLight;
+  background-color: $colorBgCommon;
+}
+
+.footer-main__description {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 135px 10px 138px;
+}
+
+.footer-main__text-cell {
+  width: 195px;
+}
+
+.footer-main__title {
+  margin-bottom: 26px;
+  font-size: pxToRem(14);
+  text-transform: uppercase;
+}
+
+.footer-main__text {
+  font-weight: 300;
+  font-size: pxToRem(12);
+  line-height: 17.4px;
+}
+
+.footer-main__form-cell {
+  width: 185px;
+
+  & button {
+    display: block;
+    width: 100%;
+    height: 32px;
+    color: $colorLight;
+    font-size: pxToRem(18);
+    text-transform: uppercase;
+    background-color: $colorBgDark;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      color: $colorDark;
+      background-color: $colorBgAccent;
+    }
+  }
+}
+
+.footer-main__input-group {
+  margin-bottom: 12px;
+
+  & input {
+    width: 100%;
+    height: 32px;
+    padding: 6px;
+
+    &::placeholder {
+      color: #8c8c8c;
+      font-weight: 300;
+      font-size: pxToRem(14);
+      line-height: 17;
+    }
+  }
+}
+
+.footer-main__checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  & span {
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: $colorLight;
+  }
+
+  & input:checked ~ span {
+    background-color: $colorBgDark;
+  }
+
+  & label {
+    margin-left: 8px;
+    color: #b5b4b4;
+    font-size: pxToRem(10);
+    cursor: pointer;
+  }
+}
+
+.footer-main__info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-main__contacts {
+  display: flex;
+  margin-right: auto;
+  font-size: pxToRem(12);
+
+  & li {
+    margin-right: 15px;
+  }
+}
+
+.footer-main__social {
+  display: flex;
+  margin-right: 68px;
+
+  & li {
+    margin-right: 10px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.footer-main__icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+
+  &--facebook {
+    background-image: $iconFacebook;
+  }
+
+  &--instagram {
+    background-image: $iconInstagram;
+  }
+
+  &--pinterest {
+    background-image: $iconPinterest;
+  }
+}
+
+.footer-main__lang {
+  display: flex;
+
+  & li {
+    padding: 0 10px;
+    font-size: pxToRem(14);
+    text-transform: uppercase;
+    border-right: 1px solid $colorBorderCommon;
+    cursor: pointer;
+
+    &:last-of-type {
+      padding-right: 0;
+      border-right: none;
+    }
+
+    &:hover {
+      color: $colorAccent
+    }
+  }
+}
