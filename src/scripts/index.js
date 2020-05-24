@@ -1,4 +1,5 @@
 import slider from "./slider";
+import suggestionsGroup from "./suggestions-group";
 
 window.addEventListener("DOMContentLoaded", () => {
   slider({
@@ -7,4 +8,6 @@ window.addEventListener("DOMContentLoaded", () => {
     dotsContainer: "home-slider__dots",
     dot: "home-slider__dot",
   });
+
+  suggestionsGroup();
 });

@@ -6,6 +6,7 @@ $colorAccent: #e2d1a6;
 
 $colorBgCommon: #353436;
 $colorBgLight: #ffffff;
+$colorBgDark: #000000;
 $colorBgAccent: #e2d1a6;
 
 $colorBorderCommon: #ffffff;
@@ -21,5 +22,6 @@ $fontTitle: "Playfair Display", serif !default;
  * use only w/ interpolation or function pxToRem */
 $sizeCommon: 16;
 
-//icons
+//images
 $iconLock: url("../../images/icon-lock.png");
+$arrow: url('../../images/arrow.png');
