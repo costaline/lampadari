@@ -1,6 +1,7 @@
 import slider from "./slider";
 import suggestionsGroup from "./suggestions-group";
 import modal from "./modal";
+import form from "./form";
 
 window.addEventListener("DOMContentLoaded", () => {
   slider({
@@ -13,4 +14,6 @@ window.addEventListener("DOMContentLoaded", () => {
   suggestionsGroup();
 
   modal("#modal-auth", "#show-modal", ".modal-auth__close");
+
+  form();
 });
