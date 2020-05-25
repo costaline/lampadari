@@ -34,10 +34,7 @@ module.exports = () => {
         {
           test: regex.script,
           exclude: /node_modules/,
-          use: {
-            loader: "babel-loader",
-            options: { presets: ["@babel/preset-env"] },
-          },
+          use: { loader: "babel-loader" },
         },
         {
           test: regex.style,
@@ -59,9 +56,7 @@ module.exports = () => {
             },
             {
               loader: "resolve-url-loader",
-              options: {
-                sourceMap: true,
-              },
+              options: { sourceMap: true },
             },
             {
               loader: "sass-loader",
@@ -104,9 +99,7 @@ module.exports = () => {
                 limit: 4096,
                 fallback: {
                   loader: "file-loader",
-                  options: {
-                    name: "images/[name]-[contenthash:4].[ext]",
-                  },
+                  options: { name: "images/[name]-[contenthash:4].[ext]" },
                 },
               },
             },
@@ -117,9 +110,7 @@ module.exports = () => {
                   progressive: true,
                   quality: 95,
                 },
-                optipng: {
-                  enabled: true,
-                },
+                optipng: { enabled: true },
               },
             },
           ],
@@ -133,9 +124,7 @@ module.exports = () => {
           use: [
             {
               loader: "file-loader",
-              options: {
-                name: "fonts/[name].[ext]",
-              },
+              options: { name: "fonts/[name].[ext]" },
             },
           ],
         },
@@ -166,10 +155,6 @@ module.exports = () => {
       contentBase: path.resolve(__dirname, "src"),
       watchContentBase: true,
     },
-    resolve: {
-      alias: {
-        "@": path.resolve(__dirname, "src/"),
-      },
-    },
+    resolve: { alias: { "@": path.resolve(__dirname, "src/") } },
   };
 };

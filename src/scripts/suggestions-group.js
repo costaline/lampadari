@@ -16,7 +16,7 @@ const suggestionsGroup = () => {
     toggleButton.firstElementChild.classList.toggle("closed");
   };
 
-  setTimeout(toggleBoxView, 3000);
+  setTimeout(() => isShowed && toggleBoxView(), 3000);
 
   toggleButton.addEventListener("click", toggleBoxView);
 };

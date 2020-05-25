@@ -7,7 +7,8 @@
 .footer-main__description {
   display: flex;
   justify-content: space-between;
-  padding: 40px 135px 10px 138px;
+  margin-bottom: 11px;
+  padding: 36px 135px 10px 138px;
 }
 
 .footer-main__text-cell {
@@ -15,7 +16,7 @@
 }
 
 .footer-main__title {
-  margin-bottom: 26px;
+  margin-bottom: 20px;
   font-size: pxToRem(14);
   text-transform: uppercase;
 }
@@ -28,6 +29,10 @@
 
 .footer-main__form-cell {
   width: 185px;
+
+  & .footer-main__title {
+    margin-bottom: 25px;
+  }
 
   & button {
     display: block;
@@ -48,12 +53,14 @@
 }
 
 .footer-main__input-group {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 
   & input {
     width: 100%;
     height: 32px;
+    margin: 1px;
     padding: 6px;
+    border: none;
 
     &::placeholder {
       color: #8c8c8c;
@@ -67,7 +74,10 @@
 .footer-main__checkbox-group {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  margin-top: -4px;
   margin-bottom: 10px;
+  margin-left: 2px;
   cursor: pointer;
 
   & span {
@@ -82,7 +92,7 @@
   }
 
   & label {
-    margin-left: 8px;
+    //margin-left: 8px;
     color: #b5b4b4;
     font-size: pxToRem(10);
     cursor: pointer;
@@ -91,11 +101,15 @@
 
 .footer-main__info {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+
+  padding-bottom: 19px;
 }
 
 .footer-main__contacts {
   display: flex;
+  margin-top: 6px;
   margin-right: auto;
   font-size: pxToRem(12);
 
@@ -106,7 +120,7 @@
 
 .footer-main__social {
   display: flex;
-  margin-right: 68px;
+  margin-right: 75px;
 
   & li {
     margin-right: 10px;
@@ -140,9 +154,10 @@
 
 .footer-main__lang {
   display: flex;
+  margin-top: 5px;
 
   & li {
-    padding: 0 10px;
+    padding: 0 9px;
     font-size: pxToRem(14);
     text-transform: uppercase;
     border-right: 1px solid $colorBorderCommon;

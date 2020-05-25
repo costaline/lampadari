@@ -1,8 +1,6 @@
 const form = () => {
   const forms = document.querySelectorAll("form");
 
-  console.log(forms);
-
   forms.forEach((f) =>
     f.addEventListener("submit", (event) => {
       event.preventDefault();
