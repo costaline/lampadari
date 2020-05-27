@@ -1,5 +1,6 @@
 .main {
   position: relative;
+  height: calc(100vh - var(--header-heigth));
 }
 
 .main__info-box {

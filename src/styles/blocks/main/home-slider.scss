@@ -4,7 +4,7 @@
 
 .home-slider__slides {
   position: relative;
-  height: 671px;
+  height: calc(100vh - var(--header-heigth));
   overflow: hidden;
 }
 
