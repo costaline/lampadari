@@ -1,3 +1,5 @@
+import { debounce } from "./utils";
+
 /**
  * function slider
  *
@@ -57,8 +59,10 @@ export const slider = ({
 
   showSlide();
 
+  const debounced = debounce((idx) => showSlide(idx), 1000);
+
   dots.forEach((d, index) =>
-    d.addEventListener("click", () => showSlide(index))
+    d.addEventListener("click", () => debounced(index))
   );
 
   const changeSlide = (n = 1) => showSlide(showedSlideIndex + n);
@@ -141,8 +145,10 @@ export default class Slider {
     );
     this.slider.addEventListener("mouseleave", () => this.activateAuto());
 
+    const debounced = debounce((idx) => this.showSlide(idx), 1000);
+
     this.dots.forEach((d, index) =>
-      d.addEventListener("click", () => this.showSlide(index))
+      d.addEventListener("click", () => debounced(index))
     );
   }
 

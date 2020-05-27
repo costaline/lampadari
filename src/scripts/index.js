@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", () => {
     slideItem: "home-slider__slide",
     dotsContainer: "home-slider__dots",
     dot: "home-slider__dot",
-    time: 5000,
+    time: 10000,
   }).init();
 
   suggestionsGroup();

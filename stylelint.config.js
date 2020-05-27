@@ -5,7 +5,7 @@ module.exports = {
 
   defaultSeverity: "warning",
 
-  plugins: [],
+  plugins: ["stylelint-scss"],
 
   rules: {
     "max-empty-lines": 1,
