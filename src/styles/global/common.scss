@@ -12,14 +12,16 @@
 
   &::placeholder {
     color: $colorSmall;
-    font-size: pxToRem(18);
+    font-size: pxToRem(16);
   }
 }
 
 .checkbox-group {
   display: flex;
   align-items: center;
+  margin-top: -4px;
   margin-bottom: 10px;
+  margin-left: 2px;
   cursor: pointer;
 
   & span {
@@ -34,7 +36,7 @@
   }
 
   & label {
-    margin-left: 8px;
+    margin-left: 4px;
     color: #b5b4b4;
     font-size: pxToRem(10);
     cursor: pointer;

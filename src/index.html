@@ -224,7 +224,7 @@
                   placeholder="Email"
                 />
               </div>
-              <div class="footer-main__checkbox-group">
+              <div class="checkbox-group">
                 <input
                   type="checkbox"
                   name="checkbox"
@@ -286,102 +286,108 @@
           <span></span>
         </button>
 
-        <form method="post" class="modal-auth__login">
-          <h4 class="modal-auth__title">ACCEDI</h4>
-          <div class="modal-auth__input-group">
-            <label for="login-email" class="visually-hidden">Email</label>
-            <input
-              class="input"
-              id="login-email"
-              type="email"
-              placeholder="E-mail"
-              name="email"
-            />
-          </div>
-          <div class="modal-auth__input-group">
-            <label for="login-password" class="visually-hidden">password</label>
-            <input
-              class="input"
-              id="login-password"
-              type="password"
-              placeholder="Password"
-              name="password"
-            />
-          </div>
-          <button class="button" type="submit">ACCEDI</button>
-          <small class="modal-auth__error">Password dimenticata</small>
-        </form>
+        <h2 class="modal-auth__title">AREA RISERVATA</h2>
 
-        <form method="post" class="modal-auth__register">
-          <h4 class="modal-auth__title">REGISTRATI</h4>
-          <div class="modal-auth__input-group">
-            <label for="register-name" class="visually-hidden">Name</label>
-            <input
-              class="input"
-              id="register-name"
-              type="text"
-              placeholder="Nome"
-              name="name"
-            />
-          </div>
-          <div class="modal-auth__input-group">
-            <label for="register-surname" class="visually-hidden"
-              >Surname</label
-            >
-            <input
-              class="input"
-              id="register-surname"
-              type="text"
-              name="surname"
-              placeholder="Cognome"
-            />
-          </div>
-          <div class="modal-auth__input-group">
-            <label for="register-email" class="visually-hidden">Email</label>
-            <input
-              class="input"
-              id="register-email"
-              type="email"
-              placeholder="E-mail"
-              name="email"
-            />
-          </div>
-          <div class="modal-auth__input-group">
-            <label for="register-password" class="visually-hidden"
-              >password</label
-            >
-            <input
-              class="input"
-              id="register-password"
-              type="password"
-              placeholder="Password"
-              name="password"
-            />
-          </div>
-          <div class="checkbox-group">
-            <input
-              id="register-accept"
-              type="checkbox"
-              class="visually-hidden"
-              name="accept"
-            />
-            <span></span>
-            <label for="register-accept">
-              Acconsento al trattamento dei dati
-            </label>
-          </div>
-          <div class="checkbox-group">
-            <input
-              id="register-subscribe"
-              type="checkbox"
-              class="visually-hidden"
-              name="subscribe"
-            />
-            <span></span>
-            <label for="register-subscribe">Mi iscrivo alla Newsletter</label>
-          </div>
-          <button class="button" type="submit">ISCRIVITI</button>
-        </form>
+        <div class="modal-auth__form-group">
+          <form method="post" class="modal-auth__login">
+            <h4 class="modal-auth__form-title">ACCEDI</h4>
+            <div class="modal-auth__input-group">
+              <label for="login-email" class="visually-hidden">Email</label>
+              <input
+                class="input"
+                id="login-email"
+                type="email"
+                placeholder="E-mail"
+                name="email"
+              />
+            </div>
+            <div class="modal-auth__input-group">
+              <label for="login-password" class="visually-hidden"
+                >password</label
+              >
+              <input
+                class="input"
+                id="login-password"
+                type="password"
+                placeholder="Password"
+                name="password"
+              />
+            </div>
+            <button class="button" type="submit">ACCEDI</button>
+            <small class="modal-auth__error">Password dimenticata</small>
+          </form>
+
+          <form method="post" class="modal-auth__register">
+            <h4 class="modal-auth__form-title">REGISTRATI</h4>
+            <div class="modal-auth__input-group">
+              <label for="register-name" class="visually-hidden">Name</label>
+              <input
+                class="input"
+                id="register-name"
+                type="text"
+                placeholder="Nome"
+                name="name"
+              />
+            </div>
+            <div class="modal-auth__input-group">
+              <label for="register-surname" class="visually-hidden"
+                >Surname</label
+              >
+              <input
+                class="input"
+                id="register-surname"
+                type="text"
+                name="surname"
+                placeholder="Cognome"
+              />
+            </div>
+            <div class="modal-auth__input-group">
+              <label for="register-email" class="visually-hidden">Email</label>
+              <input
+                class="input"
+                id="register-email"
+                type="email"
+                placeholder="E-mail"
+                name="email"
+              />
+            </div>
+            <div class="modal-auth__input-group">
+              <label for="register-password" class="visually-hidden"
+                >password</label
+              >
+              <input
+                class="input"
+                id="register-password"
+                type="password"
+                placeholder="Password"
+                name="password"
+              />
+            </div>
+            <div class="checkbox-group">
+              <input
+                id="register-accept"
+                type="checkbox"
+                class="visually-hidden"
+                name="accept"
+              />
+              <span></span>
+              <label for="register-accept">
+                Acconsento al trattamento dei dati
+              </label>
+            </div>
+            <div class="checkbox-group">
+              <input
+                id="register-subscribe"
+                type="checkbox"
+                class="visually-hidden"
+                name="subscribe"
+              />
+              <span></span>
+              <label for="register-subscribe">Mi iscrivo alla Newsletter</label>
+            </div>
+            <button class="button" type="submit">ISCRIVITI</button>
+          </form>
+        </div>
       </div>
     </div>
     <script src="./main.js"></script>
