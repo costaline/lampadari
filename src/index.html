@@ -8,176 +8,396 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" type="text/css" href="./main.css" />
 
     <title>Lampadari</title>
   </head>
 
   <body>
-    <header>
-      <nav>
-        <div>
-          <a href="/"><img src="" alt="logo" /></a>
-        </div>
+    <header class="header-main">
+      <div class="container">
+        <div class="header-main__content">
+          <nav class="header-main__nav">
+            <div class="header-main__logo">
+              <a href="/">
+                <img src="./images/logo.png" width="283" height="83" alt="logo"
+              /></a>
+            </div>
 
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li>
-            <p><a href="#">Azienda</a></p>
-            <ul>
-              <li><a href="#">Storia</a></li>
-              <li><a href="#">MM Design</a></li>
-              <li><a href="#">Designer</a></li>
-              <li><a href="#">Certificazioni</a></li>
+            <ul class="header-main__nav-list">
+              <li class="header-main__nav-item header-main__nav-item--active">
+                <a href="#" class="header-main__nav-link">Home</a>
+              </li>
+              <li class="header-main__nav-item">
+                <a class="header-main__nav-link" href="#">Azienda</a>
+                <ul class="header-main__sub-menu">
+                  <li class="header-main__sub-item"><a href="#">Storia</a></li>
+                  <li class="header-main__sub-item">
+                    <a href="#">MM Design</a>
+                  </li>
+                  <li class="header-main__sub-item">
+                    <a href="#">Designer</a>
+                  </li>
+                  <li class="header-main__sub-item">
+                    <a href="#">Certificazioni</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header-main__nav-item">
+                <a href="#" class="header-main__nav-link">Collezioni</a>
+                <ul class="header-main__sub-menu">
+                  <li class="header-main__sub-item"><a href="#">Storia</a></li>
+                  <li class="header-main__sub-item">
+                    <a href="#">MM Design</a>
+                  </li>
+                  <li class="header-main__sub-item">
+                    <a href="#">Designer</a>
+                  </li>
+                  <li class="header-main__sub-item">
+                    <a href="#">Certificazioni</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header-main__nav-item">
+                <a href="#" class="header-main__nav-link">News</a>
+                <ul class="header-main__sub-menu">
+                  <li class="header-main__sub-item"><a href="#">Storia</a></li>
+                  <li class="header-main__sub-item">
+                    <a href="#">MM Design</a>
+                  </li>
+                  <li class="header-main__sub-item">
+                    <a href="#">Designer</a>
+                  </li>
+                  <li class="header-main__sub-item">
+                    <a href="#">Certificazioni</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header-main__nav-item">
+                <a href="#" class="header-main__nav-link">Contatti</a>
+                <ul class="header-main__sub-menu">
+                  <li class="header-main__sub-item"><a href="#">Storia</a></li>
+                  <li class="header-main__sub-item">
+                    <a href="#">MM Design</a>
+                  </li>
+                  <li class="header-main__sub-item">
+                    <a href="#">Designer</a>
+                  </li>
+                  <li class="header-main__sub-item">
+                    <a href="#">Certificazioni</a>
+                  </li>
+                </ul>
+              </li>
             </ul>
-          </li>
-          <li><a href="#">Collezioni</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Contatti</a></li>
-        </ul>
-      </nav>
+          </nav>
 
-      <p id="show-modal">Area riservata <span>icon</span></p>
+          <p id="show-modal" class="header-main__show-modal">
+            <span>Area riservata</span>
+            <span class="header-main__icon-lock"></span>
+          </p>
+        </div>
+      </div>
     </header>
 
-    <main>
+    <main class="main">
       <h1 class="visually-hidden">Lampadari</h1>
       <section>
-        <div>
-          <ul>
-            <li><img src="" alt="slide 1" /></li>
-            <li><img src="" alt="slide 2" /></li>
-            <li><img src="" alt="slide 3" /></li>
+        <h2 class="visually-hidden">Main content</h2>
+
+        <div class="main__slider home-slider">
+          <ul class="home-slider__slides">
+            <li class="home-slider__slide home-slider__slide--active">
+              <img src="./images/slide-1.jpg" alt="slide 1" />
+            </li>
+            <li class="home-slider__slide">
+              <img src="./images/slide-2.jpg" alt="slide 2" />
+            </li>
+            <li class="home-slider__slide">
+              <img src="./images/slide-3.jpg" alt="slide 3" />
+            </li>
           </ul>
-          <div>dots</div>
+          <div class="home-slider__dots"></div>
         </div>
 
-        <div>
-          <h2>Lampadari contemporanei</h2>
-          <p>
+        <div class="main__info-box info-box">
+          <h2 class="info-box__title">Lampadari contemporanei</h2>
+          <p class="info-box__text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor dolore
           </p>
         </div>
 
-        <div>
-          <button>open | hide</button>
-          <section>
-            <ul>
-              <li>
-                <h3>Stai pensando ad un progetto?</h3>
-                <p>
+        <div class="main__suggestions-group suggestions-group">
+          <div class="container">
+            <button class="suggestions-group__toggle-button">
+              <span></span>
+            </button>
+
+            <ul class="suggestions-group__list">
+              <li class="suggestions-group__item">
+                <h3 class="suggestions-group__title">
+                  Stai pensando ad un progetto?
+                </h3>
+                <p class="suggestions-group__text">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
                   do eiusmod tempor dolore
                 </p>
-                <small>Approfondisci</small>
+                <p class="suggestions-group__bottom-text">Approfondisci</p>
               </li>
-              <li>
-                <h3>Vi aspettiamo alla fiera Euroluce</h3>
-                <p>
+              <li class="suggestions-group__item">
+                <h3 class="suggestions-group__title">
+                  Vi aspettiamo alla fiera Euroluce
+                </h3>
+                <p class="suggestions-group__text">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
                   do eiusmod tempor dolore
                 </p>
-                <small>Approfondisci</small>
+                <p class="suggestions-group__bottom-text">Approfondisci</p>
               </li>
-              <li>
-                <h3>Seopri la nuova collezione</h3>
-                <p>
+              <li class="suggestions-group__item">
+                <h3 class="suggestions-group__title">
+                  Seopri la nuova collezione
+                </h3>
+                <p class="suggestions-group__text">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
                   do eiusmod tempor dolore
                 </p>
-                <small>Approfondisci</small>
+                <p class="suggestions-group__bottom-text">Approfondisci</p>
               </li>
             </ul>
-          </section>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <section>
-        <div>
-          <h4>Lampadari made in italy</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea
-          </p>
-        </div>
+    <footer class="footer-main">
+      <div class="container">
+        <h2 class="visually-hidden">Footer content</h2>
+        <section class="footer-main__description">
+          <h3 class="visually-hidden">Footer description</h3>
 
-        <div>
-          <h4>Lampadari aritgianali</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea
-          </p>
-        </div>
+          <div class="footer-main__text-cell">
+            <h4 class="footer-main__title">Lampadari made in italy</h4>
+            <p class="footer-main__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea
+            </p>
+          </div>
 
-        <div>
-          <h4>45 Anni di esperienza</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea
-          </p>
-        </div>
+          <div class="footer-main__text-cell">
+            <h4 class="footer-main__title">Lampadari aritgianali</h4>
+            <p class="footer-main__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea
+            </p>
+          </div>
 
-        <div>
-          <h4>Newsletter</h4>
-          <form method="POST" id="form">
-            <div>
-              <label for="message" class="visually-hidden">Message</label>
-              <input
-                type="text"
-                name="message"
-                id="message"
-                placeholder="Nome e Cognome"
-              />
-            </div>
-            <div>
-              <label for="email" class="visually-hidden">Email</label>
-              <input type="email" name="email" id="email" placeholder="Email" />
-            </div>
-            <div>
-              <input type="checkbox" name="checkbox" id="checkbox" />
-              <label for="checkbox">Acconsento al trattamento dei dati</label>
-            </div>
-            <button type="submit">Iscriviti</button>
-          </form>
-        </div>
-      </section>
+          <div class="footer-main__text-cell">
+            <h4 class="footer-main__title">45 Anni di esperienza</h4>
+            <p class="footer-main__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea
+            </p>
+          </div>
 
-      <section>
-        <ul>
-          <li>MMLAMPADARI srl</li>
-          <li>Via Feltrina</li>
-          <li>31111 Pederobba (TV</li>
-          <li>0423.123456</li>
-          <li>info@lampadarimm.mm</li>
-          <li>P.IVA 04123456789</li>
-        </ul>
+          <div class="footer-main__form-cell">
+            <h4 class="footer-main__title">Newsletter</h4>
+            <form method="POST" id="form">
+              <div class="footer-main__input-group">
+                <label for="message" class="visually-hidden">Message</label>
+                <input
+                  type="text"
+                  name="message"
+                  id="message"
+                  placeholder="Nome e Cognome"
+                />
+              </div>
+              <div class="footer-main__input-group">
+                <label for="email" class="visually-hidden">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="checkbox-group">
+                <input
+                  type="checkbox"
+                  name="checkbox"
+                  id="checkbox"
+                  class="visually-hidden"
+                />
+                <span></span>
+                <label for="checkbox">Acconsento al trattamento dei dati</label>
+              </div>
+              <button type="submit">Iscriviti</button>
+            </form>
+          </div>
+        </section>
 
-        <ul>
-          <li><span class="visually-hidden">fasebook</span><span></span></li>
-          <li><span class="visually-hidden">instagram</span><span></span></li>
-          <li><span class="visually-hidden">p</span><span></span></li>
-        </ul>
+        <section class="footer-main__info">
+          <h3 class="visually-hidden">Footer info</h3>
 
-        <ul>
-          <li>Ita</li>
-          <li>Eng</li>
-          <li>Deu</li>
-          <li>Рус</li>
-        </ul>
-      </section>
+          <ul class="footer-main__contacts">
+            <li>MMLAMPADARI srl</li>
+            <li>Via Feltrina 00</li>
+            <li>31111 Pederobba (TV)</li>
+            <li>0423.123456</li>
+            <li>info@lampadarimm.mm</li>
+            <li>P.IVA 04123456789</li>
+          </ul>
+
+          <ul class="footer-main__social">
+            <li>
+              <span class="visually-hidden">facebook</span>
+              <span
+                class="footer-main__icon footer-main__icon--facebook"
+              ></span>
+            </li>
+            <li>
+              <span class="visually-hidden">instagram</span>
+              <span
+                class="footer-main__icon footer-main__icon--instagram"
+              ></span>
+            </li>
+            <li>
+              <span class="visually-hidden">pinterest</span>
+              <span
+                class="footer-main__icon footer-main__icon--pinterest"
+              ></span>
+            </li>
+          </ul>
+
+          <ul class="footer-main__lang">
+            <li>Ita</li>
+            <li>Eng</li>
+            <li>Deu</li>
+            <li>Рус</li>
+          </ul>
+        </section>
+      </div>
     </footer>
 
-    <div id="modal">modal</div>
+    <div id="modal-auth">
+      <div class="modal-auth__content">
+        <button type="button" class="modal-auth__close">
+          <span></span>
+        </button>
+
+        <h2 class="modal-auth__title">AREA RISERVATA</h2>
+
+        <div class="modal-auth__form-group">
+          <form method="post" class="modal-auth__login">
+            <h4 class="modal-auth__form-title">ACCEDI</h4>
+            <div class="modal-auth__input-group">
+              <label for="login-email" class="visually-hidden">Email</label>
+              <input
+                class="input"
+                id="login-email"
+                type="email"
+                placeholder="E-mail"
+                name="email"
+              />
+            </div>
+            <div class="modal-auth__input-group">
+              <label for="login-password" class="visually-hidden"
+                >password</label
+              >
+              <input
+                class="input"
+                id="login-password"
+                type="password"
+                placeholder="Password"
+                name="password"
+              />
+            </div>
+            <button class="button" type="submit">ACCEDI</button>
+            <small class="modal-auth__error">Password dimenticata</small>
+          </form>
+
+          <form method="post" class="modal-auth__register">
+            <h4 class="modal-auth__form-title">REGISTRATI</h4>
+            <div class="modal-auth__input-group">
+              <label for="register-name" class="visually-hidden">Name</label>
+              <input
+                class="input"
+                id="register-name"
+                type="text"
+                placeholder="Nome"
+                name="name"
+              />
+            </div>
+            <div class="modal-auth__input-group">
+              <label for="register-surname" class="visually-hidden"
+                >Surname</label
+              >
+              <input
+                class="input"
+                id="register-surname"
+                type="text"
+                name="surname"
+                placeholder="Cognome"
+              />
+            </div>
+            <div class="modal-auth__input-group">
+              <label for="register-email" class="visually-hidden">Email</label>
+              <input
+                class="input"
+                id="register-email"
+                type="email"
+                placeholder="E-mail"
+                name="email"
+              />
+            </div>
+            <div class="modal-auth__input-group">
+              <label for="register-password" class="visually-hidden"
+                >password</label
+              >
+              <input
+                class="input"
+                id="register-password"
+                type="password"
+                placeholder="Password"
+                name="password"
+              />
+            </div>
+            <div class="checkbox-group">
+              <input
+                id="register-accept"
+                type="checkbox"
+                class="visually-hidden"
+                name="accept"
+              />
+              <span></span>
+              <label for="register-accept">
+                Acconsento al trattamento dei dati
+              </label>
+            </div>
+            <div class="checkbox-group">
+              <input
+                id="register-subscribe"
+                type="checkbox"
+                class="visually-hidden"
+                name="subscribe"
+              />
+              <span></span>
+              <label for="register-subscribe">Mi iscrivo alla Newsletter</label>
+            </div>
+            <button class="button" type="submit">ISCRIVITI</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./main.js"></script>
   </body>
 </html>

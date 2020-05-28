@@ -1,0 +1,151 @@
+.header-main {
+  background-color: $colorBgCommon;
+}
+
+.header-main__content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--header-heigth);
+
+  @media (max-width: 768px) {
+    padding: 20px 0;
+  }
+}
+
+.header-main__nav {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
+}
+
+.header-main__logo {
+  margin-top: 3px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 500px) {
+    display: none;
+  }
+
+  & img {
+    @media (max-width: 992px) {
+      width: auto;
+      height: 50px;
+    }
+
+    @media (max-width: 768px) {
+      height: 40px;
+    }
+  }
+}
+
+.header-main__nav-list {
+  display: flex;
+  margin-top: auto;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 500px) {
+    justify-content: center;
+  }
+}
+
+.header-main__nav-item {
+  position: relative;
+  padding: 0 12px;
+  color: $colorLight;
+  font-size: pxToRem(18);
+  text-transform: uppercase;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+
+  &--active {
+    color: $colorAccent;
+    font-weight: 700;
+  }
+
+  @media (max-width: 768px) {
+    padding: 5px;
+  }
+
+  @media (max-width: 500px) {
+    font-size: pxToRem(16);
+  }
+}
+
+.header-main__nav-link {
+  &:hover {
+    color: $colorAccent;
+  }
+}
+
+.header-main__sub-menu {
+  position: absolute;
+  left: -6px;
+  z-index: 10;
+  display: none;
+  min-width: 150px;
+  padding: 8px;
+  padding-top: 29px;
+  background-color: $colorBgCommon;
+}
+
+.header-main__nav-item:hover .header-main__sub-menu {
+  display: block;
+}
+
+.header-main__sub-item {
+  padding: 6px 5px 4px 7px;
+  font-size: pxToRem(16);
+  border-bottom: 1px solid $colorBorderCommon;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    color: $colorAccent;
+  }
+}
+
+.header-main__show-modal {
+  position: absolute;
+  top: 6px;
+  right: 9px;
+  display: flex;
+  align-items: center;
+  color: $colorLight;
+  font-size: pxToRem(14);
+  line-height: 0;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    color: $colorAccent;
+  }
+}
+
+.header-main__icon-lock {
+  width: 9px;
+  height: 13px;
+  margin-left: 10px;
+  background-image: $iconLock;
+  background-repeat: no-repeat;
+  background-position: center;
+}

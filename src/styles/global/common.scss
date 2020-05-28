@@ -1,41 +1,76 @@
-* {
-  box-sizing: border-box;
+:root {
+  --header-heigth: 130px;
+
+  @media (max-width: 992px) {
+    --header-heigth: 90px;
+  }
+
+  @media (max-width: 500px) {
+    --header-heigth: 70px;
+  }
 }
 
-html {
-  color: $colorCommon;
-  font-size: $sizeCommon;
-  font-family: $fontCommon;
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  @media (max-width: 500px) {
+    padding: 0 10px;
+  }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-li {
-  margin: 0;
-  padding: 0;
+.input {
+  width: 100%;
+  height: 31px;
+  padding: 7px 12px;
+  border: none;
+
+  &::placeholder {
+    color: $colorSmall;
+    font-size: pxToRem(16);
+  }
 }
 
-ul {
-  list-style: none;
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-top: -4px;
+  margin-bottom: 10px;
+  margin-left: 2px;
+  cursor: pointer;
+
+  & span {
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: $colorLight;
+  }
+
+  & input:checked ~ span {
+    background-color: $colorBgDark;
+  }
+
+  & label {
+    margin-left: 4px;
+    color: #b5b4b4;
+    font-size: pxToRem(10);
+    cursor: pointer;
+  }
 }
 
-.visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  border: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(100%);
+.button {
+  display: block;
+  width: 100%;
+  height: 31px;
+  color: $colorLight;
+  font-size: pxToRem(18);
+  background-color: $colorBgDark;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    color: $colorCommon;
+    background-color: $colorBgAccent;
+  }
 }

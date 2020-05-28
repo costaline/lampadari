@@ -1,0 +1,33 @@
+.info-box {
+  max-width: 531px;
+  min-height: 138px;
+  padding: 19px 27px;
+  background-color: $colorBgLight;
+  opacity: 0.65;
+
+  @media (max-width: 768px) {
+    max-width: 75%;
+  }
+
+  @media (max-width: 500px) {
+    max-width: none;
+  }
+}
+
+.info-box__title {
+  margin-bottom: 27px;
+  font-size: pxToRem(30);
+  font-style: italic;
+  line-height: 24px;
+  text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    margin-bottom: 15px;
+    font-size: pxToRem(25);
+  }
+}
+
+.info-box__text {
+  font-size: pxToRem(18);
+  line-height: 24px;
+}

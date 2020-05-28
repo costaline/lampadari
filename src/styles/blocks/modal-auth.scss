@@ -1,0 +1,114 @@
+#modal-auth {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($colorBgLight, 0.6);
+  cursor: pointer;
+
+  &.showed {
+    display: flex;
+  }
+}
+
+.modal-auth__content {
+  position: relative;
+  width: 594px;
+  min-height: 361px;
+  padding: 7px 79px 27px 77px;
+  color: $colorLight;
+  background-color: $colorBgCommon;
+  cursor: auto;
+
+  @media (max-width: 600px) {
+    width: 90%;
+    padding: 7px 15px 15px;
+  }
+
+  @media (max-width: 550px) {
+  }
+}
+
+.modal-auth__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  & span {
+    display: block;
+    width: 23px;
+    height: 23px;
+    background-image: $iconClose;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.modal-auth__title {
+  margin-top: 4px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.modal-auth__form-group {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.modal-auth__form-title {
+  margin-bottom: 14px;
+  font-size: pxToRem(18);
+}
+
+.modal-auth__login,
+.modal-auth__register {
+  width: 184px;
+}
+
+.modal-auth__login {
+  @media (max-width: 600px) {
+    margin-bottom: 30px;
+  }
+
+  & .modal-auth__input-group {
+    margin-bottom: 7px;
+  }
+
+  & button {
+    margin-top: 14px;
+  }
+}
+
+.modal-auth__register {
+  & .modal-auth__input-group {
+    margin-bottom: 12px;
+  }
+}
+
+.modal-auth__checkbox-group {
+  margin-bottom: 14px;
+  color: $colorSmall;
+  font-size: pxToRem(10);
+}
+
+.modal-auth__error {
+  display: block;
+  margin-top: 10px;
+  color: $colorSmall;
+  font-size: pxToRem(12);
+}

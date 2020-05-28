@@ -7,3 +7,5 @@ node_modules
 /.vscode
 
 /design
+
+yarn-error.log
