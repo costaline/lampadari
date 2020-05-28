@@ -8,6 +8,10 @@
   top: 251px;
   right: 0;
   z-index: 3;
+
+  @media (max-width: 768px) {
+    top: 20vh;
+  }
 }
 
 .main__suggestions-group {

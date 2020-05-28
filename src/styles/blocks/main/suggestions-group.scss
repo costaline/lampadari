@@ -7,14 +7,24 @@
   flex-grow: 1;
   margin-bottom: 0;
   transition: margin-bottom 0.5s ease;
+
+  @media (max-width: 992px) {
+    flex-wrap: wrap;
+  }
 }
 
 .suggestions-group__item {
   display: flex;
   flex-direction: column;
-  height: 172px;
+  min-height: 172px;
   padding: 15px 20px 10px 15px;
   background-color: $colorBgLight;
+
+  @media (max-width: 992px) {
+    flex-grow: 1;
+    min-height: auto;
+    padding: 10px;
+  }
 
   &:first-child {
     background-color: $colorBgAccent;
@@ -38,7 +48,6 @@
 }
 
 .suggestions-group__text {
-  //margin-top: 7px;
   margin-bottom: 12px;
   font-size: pxToRem(16);
   line-height: 25px;
@@ -55,7 +64,7 @@
   justify-content: center;
   width: 88px;
   height: 30px;
-  margin: 0 auto  ;
+  margin: 0 auto;
   text-align: center;
   background-color: $colorBgLight;
   border: none;

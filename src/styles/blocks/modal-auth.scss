@@ -24,6 +24,14 @@
   color: $colorLight;
   background-color: $colorBgCommon;
   cursor: auto;
+
+  @media (max-width: 600px) {
+    width: 90%;
+    padding: 7px 15px 15px;
+  }
+
+  @media (max-width: 550px) {
+  }
 }
 
 .modal-auth__close {
@@ -46,13 +54,20 @@
 }
 
 .modal-auth__title {
-  margin-bottom: 20px;
+  margin-top: 4px;
+  margin-bottom: 16px;
   text-align: center;
 }
 
 .modal-auth__form-group {
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .modal-auth__form-title {
@@ -60,11 +75,16 @@
   font-size: pxToRem(18);
 }
 
-.modal-auth__login,.modal-auth__register {
+.modal-auth__login,
+.modal-auth__register {
   width: 184px;
 }
 
 .modal-auth__login {
+  @media (max-width: 600px) {
+    margin-bottom: 30px;
+  }
+
   & .modal-auth__input-group {
     margin-bottom: 7px;
   }

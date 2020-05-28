@@ -3,3 +3,9 @@
 
   @return #{$result}rem;
 }
+
+@mixin maxWidth($value) {
+  @media (max-width: $value) {
+    @content;
+  }
+}
