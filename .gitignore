@@ -8,4 +8,7 @@ node_modules
 
 /design
 
+/.firebase
+.firebaserc
+
 yarn-error.log

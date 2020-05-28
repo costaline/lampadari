@@ -9,6 +9,10 @@
   right: 0;
   z-index: 3;
 
+  @media (max-width: 1200px) {
+    top: 100px;
+  }
+
   @media (max-width: 768px) {
     top: 20vh;
   }
